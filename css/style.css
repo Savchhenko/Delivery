@@ -14,10 +14,14 @@ body {
 
 }
 
+.main {
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);      /* фоновый градиент */
+}
+
 .header { 
     /* Оформили расположение элементов в шапке */
     display: flex;
-    align-items: center;
+    align-items: center;   /* относительно друг друга элементы будут расположены по центру */
     justify-content: space-between;  /*раскидали содержимое по краям */ 
     /* margin-top: 44px; - отступ сверху */
     margin-bottom: 40px;
@@ -189,4 +193,36 @@ body {
     display: inline-block;
     border-radius: 50%;
     margin-left: 10px;
+}
+
+.footer {
+    padding: 60px 0;
+}
+.footer-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-nav {
+    margin-left: 35px;     /* закрепили ссылки к правому краю */
+    margin-right: auto;
+}
+.footer-link {
+    display: inline-block;
+    color: #595959;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+.footer-link:not(:last-child) {
+    margin-right: 15px;
+}
+.social-links {
+    display: flex;
+    align-items: center;
+}
+.social-link:not(:last-child) {
+    margin-right: 21px;
 }
