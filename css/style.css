@@ -44,6 +44,7 @@ body {
 .input-search {
     background-image: url(../img/search.svg); 
     width: 300px;
+    margin-left: auto;
 }
 
 .buttons {
@@ -79,7 +80,9 @@ body {
 .button-text {
     vertical-align: middle;
 }
-
+.button-card-text {
+        margin-right: 10px;
+}
 .promo {
     box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
     background: #FFF1B8 url(../img/promo-image.png) no-repeat top -100px right -244px/ 924px;
@@ -106,7 +109,6 @@ body {
 .section-heading {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 44px;
 }
 .section-title {
@@ -116,6 +118,7 @@ body {
     line-height: 42px;
     color: #000000;
     margin: 0;
+    margin-right: 30px;
 }
 
 .cards {
@@ -131,6 +134,7 @@ body {
     overflow: hidden; /* скрывает всё, что за пределами карточки */
     margin-bottom: 30px;
     flex-basis: 31%;
+    text-decoration: none;
 }
 .card-image {
     width: 384px;
@@ -155,6 +159,9 @@ body {
     font-size: 24px;
     line-height: 32px;
 }
+.card-title-reg {
+    font-weight: 400;
+}
 .card-tag {
     font-style: normal;
     font-weight: normal;
@@ -169,7 +176,18 @@ body {
 .card-info {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;        
+    flex-wrap: wrap;     
+}
+.card-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;  
+}
+.card-price-bold {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    margin-left: 32px;  
 }
 .rating {
     margin-right: 25px;
@@ -185,6 +203,12 @@ body {
 }
 .price {
     margin-right: 10px;
+}
+.ingredients {
+    font-size: 18px;
+    line-height: 21px;
+    color: #8C8C8C;
+    margin-top: 10px;
 }
 .category {
     text-overflow: ellipsis;   /* скрытие части текста */
@@ -278,7 +302,7 @@ body {
     .card-info {
         flex-wrap: wrap;
     }
-    .rating {
+    .card .rating {
         flex-basis: 100%;
     }
     .card-title {
