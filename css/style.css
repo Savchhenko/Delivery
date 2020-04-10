@@ -130,7 +130,7 @@ body {
     border-radius: 7px;
     overflow: hidden; /* скрывает всё, что за пределами карточки */
     margin-bottom: 30px;
-    flex-basis: 30%;
+    flex-basis: 31%;
 }
 .card-image {
     width: 384px;
@@ -169,6 +169,7 @@ body {
 .card-info {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;        
 }
 .rating {
     margin-right: 25px;
@@ -184,6 +185,12 @@ body {
 }
 .price {
     margin-right: 10px;
+}
+.category {
+    text-overflow: ellipsis;   /* скрытие части текста */
+    overflow: hidden;
+    white-space: nowrap;       /* слова не переносятся */
+    min-width: 150px;
 }
 .price:after {             /* псевдоэлемент - точка */
     content: "" ;
@@ -228,12 +235,141 @@ body {
     margin-right: 21px;
 }
 
-@media (max-width: 1366px) {
+/* адаптивы */
+@media (max-width: 1366px) {     
     .container {
         max-width: 960px;
     }
     .promo {
         background-position: center right -300px;
         background-size: 700; 
+    }
+    .rating {
+        margin-right: 15px;
+    }
+    .category, .price {
+        font-size: 14px;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+    .promo {
+        padding: 50px;
+        background-size: 500px;
+        background-position: center right -200px;
+    }
+    .promo-text {
+        font-size: 18px;
+        max-width: 400px;
+    }
+    .card {
+        flex-basis: 49%;
+    }
+    .footer-link {
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 560px;
+    }
+    .card-info {
+        flex-wrap: wrap;
+    }
+    .rating {
+        flex-basis: 100%;
+    }
+    .card-title {
+        font-size: 18px;
+    }
+    .promo {
+        background-size: 400px;
+    }
+    .promo-title {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+    .promo-text {
+        margin-top: 0;
+    }
+}
+@media (max-width: 578px) {
+    .container {
+        width: 90%;
+    }
+    .header {
+        flex-wrap: wrap;
+    }
+    .input-address {
+        margin-top: 15px;
+        order: 5;    
+        flex: 1;
+    }
+    .promo {
+        background-image: none;
+    }
+    .promo-title {
+        margin-bottom: 10px;
+    }
+    .section-title {
+        font-size: 20px;
+    }
+    .card {
+        flex-basis: 100%;
+    }
+    .card-image {
+        width: 100%;
+    }
+    .footer {
+        padding: 30px 0;
+    }
+    .footer-block {
+        align-items: flex-start;
+    }
+    .footer-nav {
+        margin-left: 0;
+        order: 0;
+    }
+    .footer-logo {
+        margin-right: 15px;
+        order: 1;
+    }
+    .social-links {
+        order: 2;
+    }
+}
+@media (max-width: 480px) {
+    .button-text {
+        display: none;
+    }
+    .button {
+        min-height: 20px;
+    }
+    .button-icon {
+        margin: 0;
+    }
+    .promo {
+        padding: 20px;
+    }
+    .section-heading {
+        flex-wrap: wrap;
+    }
+    .footer-block {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-logo {
+        order: 0;
+        margin-bottom: 20px;
+    }
+    .footer-nav {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .footer-link:not(:last-child) {
+        margin-right: 0;
     }
 }
